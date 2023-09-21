@@ -1,0 +1,71 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1695303442
+icon.svg::CompressedTexture2D::626873893058941761::1695303194::1695303447::1::::<><>::
+level_island.tscn::PackedScene::7614856267322496973::1695303194::0::1::::<><>::uid://4r0jotepnh7y::::res://Art/Action RPG Resources/World/GrassBackground.png<>uid://b7sfhrfm7w3yp::::res://Character/Player/player.tscn
+::res://Art/::1695303194
+::res://Art/Action RPG Resources/::1695303194
+::res://Art/Action RPG Resources/Building/::1695303194
+WoodHouse.png::CompressedTexture2D::8109906330126479707::1695303194::1695303194::1::::<><>::
+WoodHouseTrim.png::CompressedTexture2D::4236104751671937309::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/Effects/::1695303194
+EnemyDeathEffect.png::CompressedTexture2D::5285471413620053929::1695303194::1695303194::1::::<><>::
+GrassEffect.png::CompressedTexture2D::5779415409595275509::1695303194::1695303194::1::::<><>::
+HitEffect.png::CompressedTexture2D::2016936563881460953::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/Enemies/::1695303194
+Bat.png::CompressedTexture2D::5049547563440627441::1695303194::1695303194::1::::<><>::
+Slime-Move-Sheet.png::CompressedTexture2D::6282902836695875798::1695303194::1695303194::1::::<><>::
+Slime-Sheet.png::CompressedTexture2D::8255657450746900589::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/Equips/::1695303194
+Axe.png::CompressedTexture2D::7544687712885689450::1695303194::1695303194::1::::<><>::
+Glove.png::CompressedTexture2D::941307469380575619::1695303194::1695303194::1::::<><>::
+Hammer.png::CompressedTexture2D::943189467201337305::1695303194::1695303194::1::::<><>::
+Helmet.png::CompressedTexture2D::1678110260991046076::1695303194::1695303194::1::::<><>::
+lockedEffect.png::CompressedTexture2D::6933692421439252896::1695303194::1695303194::1::::<><>::
+Pickaxe.png::CompressedTexture2D::6106518868287985870::1695303194::1695303194::1::::<><>::
+selectedEffect.png::CompressedTexture2D::2831751050152252982::1695303194::1695303194::1::::<><>::
+Sword.png::CompressedTexture2D::4898949282579698317::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/Music and Sounds/::1695303194
+EnemyDie.wav::AudioStreamWAV::2409098943556074296::1695303194::1695303194::1::::<><>::
+Evade.wav::AudioStreamWAV::5461457877156533554::1695303194::1695303194::1::::<><>::
+Hit.wav::AudioStreamWAV::1538285522596733032::1695303194::1695303194::1::::<><>::
+Hurt.wav::AudioStreamWAV::8871758885154773665::1695303194::1695303194::1::::<><>::
+Menu Move.wav::AudioStreamWAV::1579573979609246009::1695303194::1695303194::1::::<><>::
+Menu Select.wav::AudioStreamWAV::5772586262272193454::1695303194::1695303194::1::::<><>::
+Music.mp3::AudioStreamMP3::8727326494858682344::1695303194::1695303194::1::::<><>::
+Pause.wav::AudioStreamWAV::1328962200418178373::1695303194::1695303194::1::::<><>::
+Swipe.wav::AudioStreamWAV::5251018858374945654::1695303194::1695303194::1::::<><>::
+Unpause.wav::AudioStreamWAV::8883431683374760265::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/Pickups/::1695303194
+Stone.png::CompressedTexture2D::6573913179964301563::1695303194::1695303194::1::::<><>::
+Wood.png::CompressedTexture2D::5423321718086079559::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/Player/::1695303194
+player-death.png::CompressedTexture2D::3646361049886041159::1695303194::1695303194::1::::<><>::
+player-hurt-2.png::CompressedTexture2D::8418147708942898517::1695303194::1695303194::1::::<><>::
+player-swing-Sheet.png::CompressedTexture2D::5496127809996722426::1695303194::1695303194::1::::<><>::
+Player.png::CompressedTexture2D::5783825171183854795::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/Shadows/::1695303194
+LargeShadow.png::CompressedTexture2D::8836525488769732875::1695303194::1695303194::1::::<><>::
+MediumShadow.png::CompressedTexture2D::6249907129644353506::1695303194::1695303194::1::::<><>::
+SmallShadow.png::CompressedTexture2D::2278169437643082148::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/UI/::1695303194
+HeartUIEmpty.png::CompressedTexture2D::1597944642134746215::1695303194::1695303194::1::::<><>::
+HeartUIFull.png::CompressedTexture2D::6593747992738286456::1695303194::1695303194::1::::<><>::
+::res://Art/Action RPG Resources/World/::1695303194
+Brige-Body.png::CompressedTexture2D::4252013274309625994::1695303194::1695303194::1::::<><>::
+Brige-Fushou.png::CompressedTexture2D::5260109138458783987::1695303194::1695303194::1::::<><>::
+Bush1.png::CompressedTexture2D::2968682618692728284::1695303194::1695303194::1::::<><>::
+Bush.png::CompressedTexture2D::2965254955518875728::1695303194::1695303194::1::::<><>::
+CliffTileset.png::CompressedTexture2D::8711993121246295057::1695303194::1695303194::1::::<><>::
+DirtTileset.png::CompressedTexture2D::8133193464981006436::1695303194::1695303194::1::::<><>::
+Grass.png::CompressedTexture2D::5507827790756487224::1695303194::1695303194::1::::<><>::
+GrassBackground-export.png::CompressedTexture2D::3264376827552522680::1695303194::1695303194::1::::<><>::
+GrassBackground.png::CompressedTexture2D::2072105649166753804::1695303194::1695303194::1::::<><>::
+Raft.png::CompressedTexture2D::4456420612810476206::1695303194::1695303194::1::::<><>::
+Rock.png::CompressedTexture2D::6795284924466015170::1695303194::1695303194::1::::<><>::
+Tree.png::CompressedTexture2D::1252333890969633282::1695303194::1695303194::1::::<><>::
+Water.png::CompressedTexture2D::3408705716774588108::1695303194::1695303194::1::::<><>::
+::res://Character/::1695303194
+::res://Character/Player/::1695303194
+player.tscn::PackedScene::4669939466414240159::1695303194::0::1::::<><>::res://Character/Player/Player.cs<>uid://cony0xn26sdex::::res://Art/Action RPG Resources/Player/Player.png
+::res://Properties/::1695303194
+launchSettings.json::JSON::-1::1695303194::0::1::::<><>::

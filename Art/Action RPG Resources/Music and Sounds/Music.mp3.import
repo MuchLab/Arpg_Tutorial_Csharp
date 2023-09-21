@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwlt165ijky2s"
+path="res://.godot/imported/Music.mp3-c4ac7eb53d62a31f5083d3d5d50d65bd.mp3str"
+
+[deps]
+
+source_file="res://Art/Action RPG Resources/Music and Sounds/Music.mp3"
+dest_files=["res://.godot/imported/Music.mp3-c4ac7eb53d62a31f5083d3d5d50d65bd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

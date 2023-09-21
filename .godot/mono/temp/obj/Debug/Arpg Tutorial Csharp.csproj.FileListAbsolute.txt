@@ -1,0 +1,17 @@
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\bin\Debug\Arpg Tutorial Csharp.deps.json
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\bin\Debug\Arpg Tutorial Csharp.runtimeconfig.json
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\bin\Debug\Arpg Tutorial Csharp.dll
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\bin\Debug\Arpg Tutorial Csharp.pdb
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.csproj.AssemblyReference.cache
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.AssemblyInfoInputs.cache
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.AssemblyInfo.cs
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.csproj.CoreCompileInputs.cache
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.csproj.CopyComplete
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.dll
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\refint\Arpg Tutorial Csharp.dll
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.pdb
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\Arpg Tutorial Csharp.genruntimeconfig.cache
+C:\Dev\GodotSeries\Tutorial\Arpg_Tutorial_Csharp\.godot\mono\temp\obj\Debug\ref\Arpg Tutorial Csharp.dll

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "配置文件 1": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Godot_v4.1.1-stable_mono_win64\\Godot_v4.1.1-stable_mono_win64.exe",
+      "commandLineArgs": "--path . --verbose",
+      "workingDirectory": "C:\\Dev\\GodotSeries\\Tutorial\\Arpg_Tutorial_Csharp"
+    }
+  }
+}
