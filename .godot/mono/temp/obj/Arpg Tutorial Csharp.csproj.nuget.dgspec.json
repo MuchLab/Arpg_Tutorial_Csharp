@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\GodotSeries\\Tutorial\\Arpg_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj": {}
+    "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\GodotSeries\\Tutorial\\Arpg_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj": {
+    "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\GodotSeries\\Tutorial\\Arpg_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
+        "projectUniqueName": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
         "projectName": "Arpg Tutorial Csharp",
-        "projectPath": "C:\\Dev\\GodotSeries\\Tutorial\\Arpg_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
+        "projectPath": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
         "packagesPath": "C:\\Users\\14276\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\GodotSeries\\Tutorial\\Arpg_Tutorial_Csharp\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\14276\\AppData\\Roaming\\NuGet\\NuGet.Config",

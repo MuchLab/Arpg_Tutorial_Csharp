@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f3ADbH6qmmEZ7+6ZqvrmKv6jqX4JY629eDgrr6Wcsh09qlBb5nXLLr4cq0SZpo9EvtBkJ25tGkW9tyQF7omZlw==",
+  "dgSpecHash": "palU2w3m0aiPeLsRFoBrxM3YOobnNgGkeSmD57X3WPy9x9uBhgr++4DyM9uwPLLPo8+YiW8i0kW4EorkobxlFg==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\GodotSeries\\Tutorial\\Arpg_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
+  "projectFilePath": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\14276\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
     "C:\\Users\\14276\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
