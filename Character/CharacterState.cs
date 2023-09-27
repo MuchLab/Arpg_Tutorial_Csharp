@@ -8,7 +8,7 @@ public partial class CharacterState : Node
     public CharacterState nextState;
     public CharacterBody2D character;
     public AnimationTree animationTree;
-    public Vector2 defaultDirection = Vector2.Down;
+    public static Vector2 defaultDirection = Vector2.Down;
 
     public virtual void StateProcess(double delta) { }
     public virtual void StateInput(InputEvent @event) { }

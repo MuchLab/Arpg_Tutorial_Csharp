@@ -42,4 +42,8 @@ public partial class CharacterStateMachine : Node
         currentState = newState;
         currentState.OnEnter();
     }
+    public override void _Input(InputEvent @event)
+    {
+        currentState.StateInput(@event);
+    }
 }

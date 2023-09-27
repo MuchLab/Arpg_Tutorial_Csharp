@@ -5,6 +5,8 @@ public partial class PlayerIdleState : CharacterState
 {
     [Export] private int friction = 10;
     [Export] private PlayerRunState runState;
+    [Export] private PlayerRollState rollState;
+    [Export] private PlayerAttackState attackState;
     public override void OnEnter()
     {
         ((AnimationNodeStateMachinePlayback)animationTree.Get(PARAMETER_PLAYBACK)).Travel("idle");
@@ -19,5 +21,12 @@ public partial class PlayerIdleState : CharacterState
         }
         else
             nextState = runState;
+    }
+    public override void StateInput(InputEvent @event)
+    {
+        if (@event.IsActionPressed("roll"))
+            nextState = rollState;
+        if (@event.IsActionPressed("attack"))
+            nextState = attackState;
     }
 }

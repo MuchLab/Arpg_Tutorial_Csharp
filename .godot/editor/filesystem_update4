@@ -1,7 +1,10 @@
-res://Character/Player/Player.cs
 res://Character/Player/player.tscn
-res://level_island.tscn
 res://Character/CharacterState.cs
 res://Character/CharacterStateMachine.cs
+res://Character/Player/Player.cs
+res://Character/Player/PlayerAttackState.cs
 res://Character/Player/PlayerIdleState.cs
+res://Character/Player/PlayerRollState.cs
 res://Character/Player/PlayerRunState.cs
+res://level_island.tscn
+res://Character/StateDebugLabel.cs

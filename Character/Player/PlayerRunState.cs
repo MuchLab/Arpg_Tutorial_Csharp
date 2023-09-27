@@ -6,6 +6,8 @@ public partial class PlayerRunState : CharacterState
     [Export] private int maxSpeed = 125;
     [Export] private int acceleration = 25;
     [Export] private PlayerIdleState idleState;
+    [Export] private PlayerRollState rollState;
+    [Export] private PlayerAttackState attackState;
     public override void OnEnter()
     {
         ((AnimationNodeStateMachinePlayback)animationTree.Get(PARAMETER_PLAYBACK)).Travel("run");
@@ -23,5 +25,12 @@ public partial class PlayerRunState : CharacterState
             character.Velocity = character.Velocity.MoveToward(maxSpeed * direction, acceleration);
             defaultDirection = direction;
         }
+    }
+    public override void StateInput(InputEvent @event)
+    {
+        if (@event.IsActionPressed("roll"))
+            nextState = rollState;
+        if (@event.IsActionPressed("attack"))
+            nextState = attackState;
     }
 }

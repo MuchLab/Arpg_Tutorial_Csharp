@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695563073
-level_island.tscn::PackedScene::7614856267322496973::1695562605::0::1::::<><>::uid://4r0jotepnh7y::::res://Art/Action RPG Resources/World/GrassBackground.png<>uid://b7sfhrfm7w3yp::::res://Character/Player/player.tscn
+::res://::1695788813
+level_island.tscn::PackedScene::7614856267322496973::1695635729::0::1::::<><>::uid://4r0jotepnh7y::::res://Art/Action RPG Resources/World/GrassBackground.png<>uid://b7sfhrfm7w3yp::::res://Character/Player/player.tscn
 ::res://Art/::1695303194
 ::res://Art/Action RPG Resources/::1695303194
 ::res://Art/Action RPG Resources/Building/::1695303194
@@ -63,11 +63,13 @@ Raft.png::CompressedTexture2D::4456420612810476206::1695303194::1695303194::1:::
 Rock.png::CompressedTexture2D::6795284924466015170::1695303194::1695303194::1::::<><>::
 Tree.png::CompressedTexture2D::1252333890969633282::1695303194::1695303194::1::::<><>::
 Water.png::CompressedTexture2D::3408705716774588108::1695303194::1695303194::1::::<><>::
-::res://Character/::1695303194
-::res://Character/Player/::1695564856
-Player.cs::CSharpScript::-1::1695563709::0::1::::<><>::
-player.tscn::PackedScene::4669939466414240159::1695562606::0::1::::<><>::res://Character/Player/Player.cs<>uid://cony0xn26sdex::::res://Art/Action RPG Resources/Player/Player.png
-CharacterStateMachine.cs::CSharpScript::-1::1695564856::0::1::::<><>::
-CharacterState.cs::CSharpScript::-1::1695564838::0::1::::<><>::
+::res://Character/::1695569466
+CharacterState.cs::CSharpScript::-1::1695569466::0::1::::<><>::
+CharacterStateMachine.cs::CSharpScript::-1::1695569310::0::1::::<><>::
+::res://Character/Player/::1695635730
+Player.cs::CSharpScript::-1::1695569918::0::1::::<><>::
+player.tscn::PackedScene::4669939466414240159::1695635730::0::1::::<><>::res://Character/Player/Player.cs<>uid://cony0xn26sdex::::res://Art/Action RPG Resources/Player/Player.png<>res://Character/CharacterStateMachine.cs<>res://Character/Player/PlayerIdleState.cs<>res://Character/Player/PlayerRunState.cs
+PlayerIdleState.cs::CSharpScript::-1::1695569673::0::1::::<><>::
+PlayerRunState.cs::CSharpScript::-1::1695569839::0::1::::<><>::
 ::res://Properties/::1695303194
 launchSettings.json::JSON::-1::1695303194::0::1::::<><>::
