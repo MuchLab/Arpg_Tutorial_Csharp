@@ -4,6 +4,7 @@ using System;
 public partial class CharacterState : Node
 {
     [Export] public bool canMove = true;
+    [Export] public bool shouldFacing = false;
     protected const string PARAMETER_PLAYBACK = "parameters/playback";
     public CharacterState nextState;
     public CharacterBody2D character;

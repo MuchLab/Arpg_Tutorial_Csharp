@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgqxtnej5ljgf"]
+[gd_scene load_steps=6 format=3 uid="uid://dgqxtnej5ljgf"]
 
 [ext_resource type="Texture2D" uid="uid://4r0jotepnh7y" path="res://Art/Action RPG Resources/World/GrassBackground.png" id="1_81wp3"]
 [ext_resource type="PackedScene" uid="uid://b7sfhrfm7w3yp" path="res://Character/Player/player.tscn" id="2_xuiw2"]
+[ext_resource type="PackedScene" uid="uid://bvc2iuxbohyci" path="res://Character/Enemy/Bat/bat.tscn" id="3_3j3ef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ka4te"]
 texture = ExtResource("1_81wp3")
@@ -227,3 +228,6 @@ layer_0/tile_data = PackedInt32Array(589841, 262144, 5, 524305, 262144, 3, 45876
 [node name="Player" parent="." instance=ExtResource("2_xuiw2")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Bat" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(-155, -72)

@@ -1,0 +1,170 @@
+[gd_scene load_steps=13 format=3 uid="uid://bvc2iuxbohyci"]
+
+[ext_resource type="Script" path="res://Character/Enemy/Bat/Bat.cs" id="1_t5fut"]
+[ext_resource type="Texture2D" uid="uid://cd7bktcxaih6x" path="res://Art/Action RPG Resources/Enemies/Bat.png" id="2_6m26f"]
+[ext_resource type="Script" path="res://Character/CharacterStateMachine.cs" id="3_ldxe4"]
+[ext_resource type="Script" path="res://Character/Enemy/Bat/BatIdleState.cs" id="4_hiivq"]
+[ext_resource type="Script" path="res://Character/Enemy/Bat/BatWanderState.cs" id="5_kq1e6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xsh08"]
+
+[sub_resource type="Animation" id="Animation_cr3sd"]
+resource_name = "fly"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6m26f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 80, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_bj62c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6m26f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 80, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5o0g3"]
+_data = {
+"RESET": SubResource("Animation_bj62c"),
+"fly": SubResource("Animation_cr3sd")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0wsxl"]
+animation = &"fly"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ufqlc"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_tl1yi"]
+states/fly/node = SubResource("AnimationNodeAnimation_0wsxl")
+states/fly/position = Vector2(318, 98.25)
+transitions = ["Start", "fly", SubResource("AnimationNodeStateMachineTransition_ufqlc")]
+
+[node name="Bat" type="CharacterBody2D"]
+script = ExtResource("1_t5fut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xsh08")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6m26f")
+hframes = 5
+region_enabled = true
+region_rect = Rect2(0, 0, 80, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "fly"
+libraries = {
+"": SubResource("AnimationLibrary_5o0g3")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_tl1yi")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("currentState", "character", "animationTree")]
+script = ExtResource("3_ldxe4")
+currentState = NodePath("IdleState")
+character = NodePath("..")
+animationTree = NodePath("../AnimationTree")
+
+[node name="IdleState" type="Node" parent="StateMachine" node_paths=PackedStringArray("wanderState")]
+script = ExtResource("4_hiivq")
+wanderState = NodePath("../WanderState")
+
+[node name="RestTimer" type="Timer" parent="StateMachine/IdleState"]
+one_shot = true
+
+[node name="WanderState" type="Node" parent="StateMachine" node_paths=PackedStringArray("idleState")]
+script = ExtResource("5_kq1e6")
+idleState = NodePath("../IdleState")
+shouldFacing = true

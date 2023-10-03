@@ -30,6 +30,16 @@ public partial class CharacterStateMachine : Node
             SwitchState(currentState.nextState);
         if (!currentState.canMove)
             character.Velocity = Vector2.Zero;
+        if (currentState.shouldFacing)
+            ChangeFacingDirection();
+    }
+
+    private void ChangeFacingDirection()
+    {
+        if (character.Velocity.X > 0)
+            ((Bat)character).sprite.FlipH = false;
+        if (character.Velocity.X < 0)
+            ((Bat)character).sprite.FlipH = true;
     }
 
     private void SwitchState(CharacterState newState)

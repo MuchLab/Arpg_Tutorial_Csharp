@@ -1,3 +1,4 @@
+res://level_island.tscn
 res://Character/Player/player.tscn
 res://Character/CharacterState.cs
 res://Character/CharacterStateMachine.cs
@@ -6,5 +7,8 @@ res://Character/Player/PlayerAttackState.cs
 res://Character/Player/PlayerIdleState.cs
 res://Character/Player/PlayerRollState.cs
 res://Character/Player/PlayerRunState.cs
-res://level_island.tscn
 res://Character/StateDebugLabel.cs
+res://Character/Enemy/Bat/bat.tscn
+res://Character/Enemy/Bat/Bat.cs
+res://Character/Enemy/Bat/BatIdleState.cs
+res://Character/Enemy/Bat/BatWanderState.cs
