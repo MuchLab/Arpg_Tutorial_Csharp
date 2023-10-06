@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696346780
-level_island.tscn::PackedScene::7614856267322496973::1696346398::0::1::::<><>::uid://4r0jotepnh7y::::res://Art/Action RPG Resources/World/GrassBackground.png<>uid://b7sfhrfm7w3yp::::res://Character/Player/player.tscn
+::res://::1696604125
+level_island.tscn::PackedScene::7614856267322496973::1696348956::0::1::::<><>::uid://4r0jotepnh7y::::res://Art/Action RPG Resources/World/GrassBackground.png<>uid://b7sfhrfm7w3yp::::res://Character/Player/player.tscn<>uid://bvc2iuxbohyci::::res://Character/Enemy/Bat/bat.tscn
 ::res://Art/::1695303194
 ::res://Art/Action RPG Resources/::1695303194
 ::res://Art/Action RPG Resources/Building/::1695303194
@@ -63,19 +63,19 @@ Raft.png::CompressedTexture2D::4456420612810476206::1695303194::1695303194::1:::
 Rock.png::CompressedTexture2D::6795284924466015170::1695303194::1695303194::1::::<><>::
 Tree.png::CompressedTexture2D::1252333890969633282::1695303194::1695303194::1::::<><>::
 Water.png::CompressedTexture2D::3408705716774588108::1695303194::1695303194::1::::<><>::
-::res://Character/::1696346985
-CharacterState.cs::CSharpScript::-1::1696346985::0::1::::<><>::
-CharacterStateMachine.cs::CSharpScript::-1::1696346311::0::1::::<><>::
+::res://Character/::1696348923
+CharacterState.cs::CSharpScript::-1::1696348779::0::1::::<><>::
+CharacterStateMachine.cs::CSharpScript::-1::1696348923::0::1::::<><>::
 StateDebugLabel.cs::CSharpScript::-1::1695791752::0::1::::<><>::
 ::res://Character/Enemy/::1696346604
-::res://Character/Enemy/Bat/::1696346897
-bat.cs::CSharpScript::-1::1696346804::0::1::::<><>::
-bat.tscn::PackedScene::3866169886817785892::1696346606::0::1::::<><>::
-BatIdleState.cs::CSharpScript::-1::1696346883::0::1::::<><>::
-BatWanderState.cs::CSharpScript::-1::1696346897::0::1::::<><>::
-::res://Character/Player/::1696346398
+::res://Character/Enemy/Bat/::1696348957
+Bat.cs::CSharpScript::-1::1696348881::0::1::::<><>::
+bat.tscn::PackedScene::3866169886817785892::1696348957::0::1::::<><>::res://Character/Enemy/Bat/Bat.cs<>uid://cd7bktcxaih6x::::res://Art/Action RPG Resources/Enemies/Bat.png<>res://Character/CharacterStateMachine.cs<>res://Character/Enemy/Bat/BatIdleState.cs<>res://Character/Enemy/Bat/BatWanderState.cs
+BatIdleState.cs::CSharpScript::-1::1696348595::0::1::::<><>::
+BatWanderState.cs::CSharpScript::-1::1696348686::0::1::::<><>::
+::res://Character/Player/::1696348956
 Player.cs::CSharpScript::-1::1695569918::0::1::::<><>::
-player.tscn::PackedScene::4669939466414240159::1696346398::0::1::::<><>::res://Character/Player/Player.cs<>uid://cony0xn26sdex::::res://Art/Action RPG Resources/Player/Player.png<>res://Character/CharacterStateMachine.cs<>res://Character/Player/PlayerIdleState.cs<>res://Character/Player/PlayerRunState.cs<>res://Character/Player/PlayerRollState.cs<>res://Character/Player/PlayerAttackState.cs<>res://Character/StateDebugLabel.cs
+player.tscn::PackedScene::4669939466414240159::1696348956::0::1::::<><>::res://Character/Player/Player.cs<>uid://cony0xn26sdex::::res://Art/Action RPG Resources/Player/Player.png<>res://Character/CharacterStateMachine.cs<>res://Character/Player/PlayerIdleState.cs<>res://Character/Player/PlayerRunState.cs<>res://Character/Player/PlayerRollState.cs<>res://Character/Player/PlayerAttackState.cs<>res://Character/StateDebugLabel.cs
 PlayerAttackState.cs::CSharpScript::-1::1695790467::0::1::::<><>::
 PlayerIdleState.cs::CSharpScript::-1::1695790962::0::1::::<><>::
 PlayerRollState.cs::CSharpScript::-1::1695790273::0::1::::<><>::

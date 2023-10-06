@@ -15,6 +15,7 @@ public partial class CharacterStateMachine : Node
             {
                 state.character = character;
                 state.animationTree = animationTree;
+                state.InterruptState += _on_interrupt_state;
             }
             else
                 GD.PushWarning($"Child {child.Name} is not a State for CharacterStateMachine.");
@@ -34,6 +35,10 @@ public partial class CharacterStateMachine : Node
             ChangeFacingDirection();
     }
 
+    public void _on_interrupt_state(CharacterState state)
+    {
+        SwitchState(state);
+    }
     private void ChangeFacingDirection()
     {
         if (character.Velocity.X > 0)

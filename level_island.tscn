@@ -231,3 +231,27 @@ layer_0/tile_data = PackedInt32Array(589841, 262144, 5, 524305, 262144, 3, 45876
 
 [node name="Bat" parent="." instance=ExtResource("3_3j3ef")]
 position = Vector2(-155, -72)
+
+[node name="Bat2" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(-155, 38)
+
+[node name="Bat3" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(153, 16)
+
+[node name="Bat4" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(191, -98)
+
+[node name="Bat5" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(11, 53)
+
+[node name="Bat6" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(-107, -139)
+
+[node name="Bat7" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(-63, -39)
+
+[node name="Bat8" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(-232, -123)
+
+[node name="Bat9" parent="." instance=ExtResource("3_3j3ef")]
+position = Vector2(30, -108)

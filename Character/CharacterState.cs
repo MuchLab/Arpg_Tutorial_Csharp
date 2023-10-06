@@ -3,6 +3,8 @@ using System;
 
 public partial class CharacterState : Node
 {
+    [Signal] public delegate void InterruptStateEventHandler(CharacterState state);
+
     [Export] public bool canMove = true;
     [Export] public bool shouldFacing = false;
     protected const string PARAMETER_PLAYBACK = "parameters/playback";
