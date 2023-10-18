@@ -1,6 +1,8 @@
+Node
 CollisionShape2D
 Area2D
-Node
+RemoteTransform2D
+Marker2D
 Timer
 AnimationTree
 AnimationPlayer

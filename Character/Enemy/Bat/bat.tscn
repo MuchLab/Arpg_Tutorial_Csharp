@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bvc2iuxbohyci"]
+[gd_scene load_steps=22 format=3 uid="uid://bvc2iuxbohyci"]
 
 [ext_resource type="Script" path="res://Character/Enemy/Bat/Bat.cs" id="1_t5fut"]
 [ext_resource type="Texture2D" uid="uid://cd7bktcxaih6x" path="res://Art/Action RPG Resources/Enemies/Bat.png" id="2_6m26f"]
@@ -8,8 +8,12 @@
 [ext_resource type="Script" path="res://Character/Enemy/Bat/BatChaseState.cs" id="6_0itxp"]
 [ext_resource type="Script" path="res://Character/Enemy/Bat/BatResumeState.cs" id="7_4m1bl"]
 [ext_resource type="Script" path="res://Character/Enemy/SoftCollision.cs" id="8_py5ta"]
+[ext_resource type="Script" path="res://Character/Enemy/Bat/BatHurtState.cs" id="8_rbfg3"]
+[ext_resource type="Script" path="res://Character/Enemy/Bat/BatDeathState.cs" id="9_5qwb7"]
+[ext_resource type="Script" path="res://Character/Enemy/EnemyHurtbox.cs" id="9_wy86h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xsh08"]
+radius = 6.0
 
 [sub_resource type="Animation" id="Animation_bj62c"]
 length = 0.001
@@ -138,11 +142,16 @@ radius = 138.004
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlwsi"]
 radius = 10.0499
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1gnv"]
+radius = 8.0
+height = 16.0
+
 [node name="Bat" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_t5fut")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18)
 shape = SubResource("CircleShape2D_xsh08")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -190,7 +199,15 @@ script = ExtResource("7_4m1bl")
 idleState = NodePath("../IdleState")
 shouldFacing = true
 
+[node name="HurtState" type="Node" parent="StateMachine" node_paths=PackedStringArray("chaseState")]
+script = ExtResource("8_rbfg3")
+chaseState = NodePath("../ChaseState")
+
+[node name="DeathState" type="Node" parent="StateMachine"]
+script = ExtResource("9_5qwb7")
+
 [node name="PlayerDetector" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
@@ -205,5 +222,16 @@ script = ExtResource("8_py5ta")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SoftCollision"]
 shape = SubResource("CircleShape2D_rlwsi")
 
+[node name="Hurtbox" type="Area2D" parent="." node_paths=PackedStringArray("bat")]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("9_wy86h")
+bat = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_h1gnv")
+
+[connection signal="BatDeath" from="." to="StateMachine/DeathState" method="_on_bat_bat_death"]
 [connection signal="body_entered" from="PlayerDetector" to="StateMachine/ChaseState" method="_on_player_detector_body_entered"]
 [connection signal="body_exited" from="PlayerDetector" to="StateMachine/ChaseState" method="_on_player_detector_body_exited"]
+[connection signal="KnockingbackCharacter" from="Hurtbox" to="StateMachine/HurtState" method="_on_hurtbox_knockingback_character"]

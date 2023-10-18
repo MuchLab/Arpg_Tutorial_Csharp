@@ -93,11 +93,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DEV\\GODOTSERIES\\TUTORIAL\\ARPG_TUTORIAL_CSHARP\\Arpg Tutorial Csharp.csproj",
+      "projectUniqueName": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
       "projectName": "Arpg Tutorial Csharp",
-      "projectPath": "C:\\DEV\\GODOTSERIES\\TUTORIAL\\ARPG_TUTORIAL_CSHARP\\Arpg Tutorial Csharp.csproj",
+      "projectPath": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
       "packagesPath": "C:\\Users\\14276\\.nuget\\packages\\",
-      "outputPath": "C:\\DEV\\GODOTSERIES\\TUTORIAL\\ARPG_TUTORIAL_CSHARP\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\14276\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -150,12 +150,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.23, 6.0.23]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.23, 6.0.23]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.23, 6.0.23]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
