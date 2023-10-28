@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bvc2iuxbohyci"]
+[gd_scene load_steps=24 format=3 uid="uid://bvc2iuxbohyci"]
 
 [ext_resource type="Script" path="res://Character/Enemy/Bat/Bat.cs" id="1_t5fut"]
 [ext_resource type="Texture2D" uid="uid://cd7bktcxaih6x" path="res://Art/Action RPG Resources/Enemies/Bat.png" id="2_6m26f"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Character/Enemy/Bat/BatHurtState.cs" id="8_rbfg3"]
 [ext_resource type="Script" path="res://Character/Enemy/Bat/BatDeathState.cs" id="9_5qwb7"]
 [ext_resource type="Script" path="res://Character/Enemy/EnemyHurtbox.cs" id="9_wy86h"]
+[ext_resource type="Script" path="res://Character/Hitbox.cs" id="12_mmwfh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xsh08"]
 radius = 6.0
@@ -146,6 +147,9 @@ radius = 10.0499
 radius = 8.0
 height = 16.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1latj"]
+radius = 8.0
+
 [node name="Bat" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_t5fut")
@@ -194,6 +198,9 @@ resumeState = NodePath("../ResumeState")
 softCollision = NodePath("../../SoftCollision")
 shouldFacing = true
 
+[node name="ChaseResumeTimer" type="Timer" parent="StateMachine/ChaseState"]
+one_shot = true
+
 [node name="ResumeState" type="Node" parent="StateMachine" node_paths=PackedStringArray("idleState")]
 script = ExtResource("7_4m1bl")
 idleState = NodePath("../IdleState")
@@ -231,7 +238,18 @@ bat = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CapsuleShape2D_h1gnv")
 
+[node name="Hitbox" type="Area2D" parent="." node_paths=PackedStringArray("character")]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("12_mmwfh")
+character = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_1latj")
+
 [connection signal="BatDeath" from="." to="StateMachine/DeathState" method="_on_bat_bat_death"]
 [connection signal="body_entered" from="PlayerDetector" to="StateMachine/ChaseState" method="_on_player_detector_body_entered"]
 [connection signal="body_exited" from="PlayerDetector" to="StateMachine/ChaseState" method="_on_player_detector_body_exited"]
 [connection signal="KnockingbackCharacter" from="Hurtbox" to="StateMachine/HurtState" method="_on_hurtbox_knockingback_character"]
+[connection signal="HitStoped" from="Hitbox" to="StateMachine/ChaseState" method="_on_hitbox_hit_stoped"]
+[connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]

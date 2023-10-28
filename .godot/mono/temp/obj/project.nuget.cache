@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "mFd3EiSA4V75+zGfXtSOcRXr/pyTzQF8I88IyepW08HsypedEynVKbZWAn+e0pFBF3kCOUIamej/dKy3ZssOLQ==",
+  "dgSpecHash": "oEyR6IpPAcpPeef5rV92NdKDg0C7+BL4EHb3uuON16KPGKV968OJ33fcr+IVjgrei6jmQRemrRMe1mXoIg+hLQ==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\GodotSeries\\Tutorial\\ARPG_Tutorial_Csharp\\Arpg Tutorial Csharp.csproj",
+  "projectFilePath": "C:\\DEV\\GODOTSERIES\\TUTORIAL\\ARPG_TUTORIAL_CSHARP\\Arpg Tutorial Csharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\14276\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
     "C:\\Users\\14276\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
     "C:\\Users\\14276\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512",
-    "C:\\Users\\14276\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.23\\microsoft.netcore.app.ref.6.0.23.nupkg.sha512",
     "C:\\Users\\14276\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.23\\microsoft.windowsdesktop.app.ref.6.0.23.nupkg.sha512",
+    "C:\\Users\\14276\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.23\\microsoft.netcore.app.ref.6.0.23.nupkg.sha512",
     "C:\\Users\\14276\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.23\\microsoft.aspnetcore.app.ref.6.0.23.nupkg.sha512"
   ],
   "logs": []

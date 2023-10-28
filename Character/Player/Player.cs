@@ -6,7 +6,7 @@ public partial class Player : CharacterBody2D
     [Signal] public delegate void PlayerHealthChangedEventHandler(int currentHealth);
     [Signal] public delegate void PlayerDeathEventHandler();
 
-    private int currentHealth;
+    [Export] private int currentHealth = 100;
 
     public int CurrentHealth
     {

@@ -7,8 +7,15 @@ public partial class BatChaseState : CharacterState
     [Export] private float acceleration = 25;
     [Export] private BatResumeState resumeState;
     [Export] private SoftCollision softCollision;
+    [Export] private float chaseResumeDuration = 1;
 
     private Player player = null;
+    private Timer chaseResumeTimer;
+
+    public override void _Ready()
+    {
+        chaseResumeTimer = GetNode<Timer>("ChaseResumeTimer");
+    }
     public override void OnEnter()
     {
         ((AnimationNodeStateMachinePlayback)animationTree.Get(PARAMETER_PLAYBACK)).Travel("fly");
@@ -23,6 +30,10 @@ public partial class BatChaseState : CharacterState
             {
                 var pushDirection = softCollision.GetPushDirection();
                 character.Velocity = character.Velocity.MoveToward(pushDirection * maxSpeed, acceleration);
+            }
+            if (!chaseResumeTimer.IsStopped())
+            {
+                character.Velocity = Vector2.Zero;
             }
         }
     }
@@ -41,5 +52,10 @@ public partial class BatChaseState : CharacterState
             player = null;
             EmitSignal(CharacterState.SignalName.InterruptState, resumeState);
         }
+    }
+
+    public void _on_hitbox_hit_stoped()
+    {
+        chaseResumeTimer.Start(chaseResumeDuration);
     }
 }
