@@ -1,2 +1,0 @@
-﻿58506
-D:/Godot/Godot_v4.3-stable_mono_win64/godot.exe
