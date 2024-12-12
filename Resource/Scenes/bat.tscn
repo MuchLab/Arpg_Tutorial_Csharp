@@ -1,0 +1,255 @@
+[gd_scene load_steps=24 format=3 uid="uid://bvc2iuxbohyci"]
+
+[ext_resource type="Script" path="res://Script/Character/Enemy/Bat/Bat.cs" id="1_t5fut"]
+[ext_resource type="Texture2D" uid="uid://cd7bktcxaih6x" path="res://Art/Action RPG Resources/Enemies/Bat.png" id="2_6m26f"]
+[ext_resource type="Script" path="res://Script/Character/CharacterStateMachine.cs" id="3_ldxe4"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/Bat/BatIdleState.cs" id="4_hiivq"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/Bat/BatWanderState.cs" id="5_kq1e6"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/Bat/BatChaseState.cs" id="6_0itxp"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/Bat/BatResumeState.cs" id="7_4m1bl"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/SoftCollision.cs" id="8_py5ta"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/Bat/BatHurtState.cs" id="8_rbfg3"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/Bat/BatDeathState.cs" id="9_5qwb7"]
+[ext_resource type="Script" path="res://Script/Character/Enemy/EnemyHurtbox.cs" id="9_wy86h"]
+[ext_resource type="Script" path="res://Script/Character/Hitbox.cs" id="12_mmwfh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xsh08"]
+radius = 6.0
+
+[sub_resource type="Animation" id="Animation_bj62c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6m26f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 80, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_cr3sd"]
+resource_name = "fly"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_6m26f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 80, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5o0g3"]
+_data = {
+"RESET": SubResource("Animation_bj62c"),
+"fly": SubResource("Animation_cr3sd")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0wsxl"]
+animation = &"fly"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ufqlc"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_tl1yi"]
+states/fly/node = SubResource("AnimationNodeAnimation_0wsxl")
+states/fly/position = Vector2(318, 98.25)
+transitions = ["Start", "fly", SubResource("AnimationNodeStateMachineTransition_ufqlc")]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utprn"]
+radius = 138.004
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rlwsi"]
+radius = 10.0499
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1gnv"]
+radius = 8.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1latj"]
+radius = 8.0
+
+[node name="Bat" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_t5fut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18)
+shape = SubResource("CircleShape2D_xsh08")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6m26f")
+hframes = 5
+region_enabled = true
+region_rect = Rect2(0, 0, 80, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5o0g3")
+}
+autoplay = "fly"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_tl1yi")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("currentState", "character", "animationTree")]
+script = ExtResource("3_ldxe4")
+currentState = NodePath("IdleState")
+character = NodePath("..")
+animationTree = NodePath("../AnimationTree")
+
+[node name="IdleState" type="Node" parent="StateMachine" node_paths=PackedStringArray("wanderState")]
+script = ExtResource("4_hiivq")
+wanderState = NodePath("../WanderState")
+
+[node name="RestTimer" type="Timer" parent="StateMachine/IdleState"]
+one_shot = true
+
+[node name="WanderState" type="Node" parent="StateMachine" node_paths=PackedStringArray("idleState")]
+script = ExtResource("5_kq1e6")
+idleState = NodePath("../IdleState")
+shouldFacing = true
+
+[node name="ChaseState" type="Node" parent="StateMachine" node_paths=PackedStringArray("resumeState", "softCollision")]
+script = ExtResource("6_0itxp")
+resumeState = NodePath("../ResumeState")
+softCollision = NodePath("../../SoftCollision")
+shouldFacing = true
+
+[node name="ChaseResumeTimer" type="Timer" parent="StateMachine/ChaseState"]
+one_shot = true
+
+[node name="ResumeState" type="Node" parent="StateMachine" node_paths=PackedStringArray("idleState")]
+script = ExtResource("7_4m1bl")
+idleState = NodePath("../IdleState")
+shouldFacing = true
+
+[node name="HurtState" type="Node" parent="StateMachine" node_paths=PackedStringArray("chaseState")]
+script = ExtResource("8_rbfg3")
+chaseState = NodePath("../ChaseState")
+
+[node name="DeathState" type="Node" parent="StateMachine"]
+script = ExtResource("9_5qwb7")
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+shape = SubResource("CircleShape2D_utprn")
+
+[node name="SoftCollision" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("8_py5ta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoftCollision"]
+shape = SubResource("CircleShape2D_rlwsi")
+
+[node name="Hurtbox" type="Area2D" parent="." node_paths=PackedStringArray("bat")]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("9_wy86h")
+bat = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_h1gnv")
+
+[node name="Hitbox" type="Area2D" parent="." node_paths=PackedStringArray("character")]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("12_mmwfh")
+character = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_1latj")
+
+[connection signal="BatDeath" from="." to="StateMachine/DeathState" method="_on_bat_bat_death"]
+[connection signal="body_entered" from="PlayerDetector" to="StateMachine/ChaseState" method="_on_player_detector_body_entered"]
+[connection signal="body_exited" from="PlayerDetector" to="StateMachine/ChaseState" method="_on_player_detector_body_exited"]
+[connection signal="KnockingbackCharacter" from="Hurtbox" to="StateMachine/HurtState" method="_on_hurtbox_knockingback_character"]
+[connection signal="HitStoped" from="Hitbox" to="StateMachine/ChaseState" method="_on_hitbox_hit_stoped"]
+[connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]

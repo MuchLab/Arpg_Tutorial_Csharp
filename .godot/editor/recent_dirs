@@ -1,5 +1,6 @@
-res://Character
-res://Character/Enemy
-res://Character/Enemy/Bat
-res://Character/Player
+res://Script/Character
+res://Script/Character/Enemy
+res://Script/Character/Enemy/Bat
+res://Script/Character/Player
+res://Art/Action RPG Resources/World
 res://

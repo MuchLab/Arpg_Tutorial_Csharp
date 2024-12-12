@@ -1,3 +1,6 @@
+Node2D
+TileMap
+TileMapLayer
 Node
 CollisionShape2D
 Area2D
@@ -10,5 +13,3 @@ Sprite2D
 CharacterBody2D
 Label
 Camera2D
-CollisionPolygon2D
-TileMap
